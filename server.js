@@ -16,9 +16,13 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true,
 
 // mongodb error / success ===============
 db.on('error', (err) => console.log(err.message + ' is MondoDB not running?'))
+db.on('connected', () => console.log('Mondo Connect'));
+do.on('disconnected', () => console.log('Mondo Disconnect'));
 
 // middleware ===============
-
+app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: true }));
+app.use(methodOveride('_method'));
 
 // routes ===============
 app.get('/', (req, res) => {
@@ -26,7 +30,8 @@ app.get('/', (req, res) => {
 })
 
 // controllers ===============
-
+const artContoller = require('./controllers/art');
+app.use('/home', artContoller);
 
 // listener ===============
 app.listen(PORT, () => console.log('You are now listening to port ${PORT}'))
