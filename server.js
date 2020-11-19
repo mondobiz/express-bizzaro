@@ -30,8 +30,8 @@ app.get('/', (req, res) => {
 })
 
 // controllers ===============
-const artContoller = require('./controllers/art');
-app.use('/home', artContoller);
+const postController = require('./controllers/posts');
+app.use('/home', postController);
 
 // listener ===============
 app.listen(PORT, () => console.log('You are now listening to port ${PORT}'))
