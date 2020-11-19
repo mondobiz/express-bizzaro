@@ -17,7 +17,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true,
 // mongodb error / success ===============
 db.on('error', (err) => console.log(err.message + ' is MondoDB not running?'))
 db.on('connected', () => console.log('Mondo Connect'));
-do.on('disconnected', () => console.log('Mondo Disconnect'));
+db.on('disconnected', () => console.log('Mondo Disconnect'));
 
 // middleware ===============
 app.set('view engine', 'ejs');
