@@ -7,15 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="userShowContainer"> 
+    <div class='homeContainerToo'> 
     <h1>hello</h1>
     <div><%= user.userName %></div>
     <div><%= user.password %></div>
-
-    <button><a href="/users/edit/<%= user._id %>">Edit</a></button>
-    <form action="/users/<%= user._id %>?_method=DELETE" method="POST">
-        <button>Delete</button>
-    </form>
     </div>
 </body>
 </html>
