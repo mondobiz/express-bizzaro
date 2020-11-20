@@ -1,7 +1,7 @@
 // dependencies ===============
 const express = require('express');
 const mongoose = require('mongoose');
-const methodOveride = require('method-override');
+const methodOverride = require('method-override');
 const app = express();
 
 // env configuration ===============
@@ -11,27 +11,30 @@ const MONGODB_URI = process.env.MONGODB_URI;
 
 // mongodb configuration ===============
 const db = mongoose.connection;
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, 
-    useUnifiedTopology: true, useFindAndModify: true });
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 // mongodb error / success ===============
-db.on('error', (err) => console.log(err.message + ' is MondoDB not running?'))
-db.on('connected', () => console.log('Mondo Connect'));
-db.on('disconnected', () => console.log('Mondo Disconnect'));
+db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
+db.on('connected', () => console.log('mongo connected'));
+db.on('disconnected', () => console.log('mongo disconnected'));
 
 // middleware ===============
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
-app.use(methodOveride('_method'));
+app.use(methodOverride('_method'));
 
 // routes ===============
 app.get('/', (req, res) => {
-    res.send('Hi');
+  res.send('hello world');
 })
 
 // controllers ===============
 const postController = require('./controllers/posts');
-app.use('/home', postController);
+app.use('/posts', postController);
+
+// app.use('/*', (req, res) => {
+//   res.send(`404 error, cannot find page ${req.baseUrl}`)
+// })
 
 // listener ===============
-app.listen(PORT, () => console.log('You are now listening to port ${PORT}'))
+app.listen(PORT, () => console.log(`server is listening on port ${PORT}`))

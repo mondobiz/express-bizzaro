@@ -1,15 +1,18 @@
-// dependencies
+// dependencies ===============
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// post schema
+// post schema ==============
 const postSchema = new Schema ({
-    title: String,
-    body: String
+  title: String,
+  image: String,
+  description: String,
+  dateMade: String,
+  artistName: String,
 })
 
-// create mongoose model
+// create mongoose model ==============
 const Post = mongoose.model('Post', postSchema);
 
-// exports
+// exports ===============
 module.exports = Post;

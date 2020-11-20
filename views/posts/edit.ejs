@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit page!</h1>
+
+<form action='/posts/<%= post._id %>?_method=PUT' method='POST'>
+        <label for='title'>Name of your art peice</label>
+        <input name='title' type='text'/><br />
+
+        <label for='image'>Image of what you made</label>
+        <textarea name='image'></textarea><br />
+        <label for='description'>Description</label>
+        <textarea name='description'></textarea><br />
+        <label for='dateMade'>When you completed your art</label>
+        <textarea name='dateMade'></textarea><br />
+        <label for='artistName'>When you completed your art</label>
+        <textarea name='artistName'></textarea><br />
+        <input type='submit' />
+        </form>
+</body>
+</html>
