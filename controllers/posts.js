@@ -3,7 +3,8 @@ const { render } = require('ejs');
 const express = require('express');
 const router = express.Router();
 const Post = require('../models/post');
-const User = require('..//')
+
+
 // INDEX PAGE: get all posts ==============
 router.get('/', (req, res) => {
   Post.find({}, (error, allPosts) => {

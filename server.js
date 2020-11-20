@@ -22,6 +22,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.use(express.static(__dirname + '/public'));
 
 // routes ===============
 app.get('/', (req, res) => {
@@ -32,9 +33,8 @@ app.get('/', (req, res) => {
 const postController = require('./controllers/posts');
 app.use('/posts', postController);
 
-// app.use('/*', (req, res) => {
-//   res.send(`404 error, cannot find page ${req.baseUrl}`)
-// })
+const userController = require('./controllers/users');
+app.use('/users', userController);
 
 // listener ===============
 app.listen(PORT, () => console.log(`server is listening on port ${PORT}`))

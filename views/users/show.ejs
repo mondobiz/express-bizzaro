@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">             
     <title>Document</title>
 </head>
 <body>
+    <div class="userShowContainer"> 
     <h1>hello</h1>
-    <div><%= post.title %></div>
-    <img src="<%= post.image %>">
-    <div><%= post.description %></div>
-    <div><%= post.dateMade %></div>
-    <button><a href="/posts/edit/<%= post._id %>">Edit</a></button>
-    <form action='/posts/<%= post._id %>?_method=DELETE' method='POST'>
+    <div><%= user.userName %></div>
+    <div><%= user.password %></div>
+
+    <button><a href="/users/edit/<%= user._id %>">Edit</a></button>
+    <form action="/users/<%= user._id %>?_method=DELETE" method="POST">
         <button>Delete</button>
     </form>
+    </div>
 </body>
 </html>
