@@ -14,6 +14,8 @@ router.get('/', (req, res) => {
     })
 })
 
+
+
 // NEW PAGE
 router.get('/new', (req, res) => {
     res.render('users/new')
@@ -21,7 +23,6 @@ router.get('/new', (req, res) => {
 
 // UPDATE ROUTE: update user ===============
 router.put('/:id', (req, res) => {
-    console.log('FUCK!')
     console.log(req.params.id)
     User.findByIdAndUpdate(req.params.id, req.body, (error, updatedUser) => {
       res.redirect(`/users/${req.params.id}`)

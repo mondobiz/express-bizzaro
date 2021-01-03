@@ -7,14 +7,18 @@
     <title>Art Page</title>
 </head>
 <body>
-    <h1>Mondo Art</h1>
-    <div><%= post.title %></div>
-    <img src="<%= post.image %>">
-    <div><%= post.description %></div>
-    <div><%= post.dateMade %></div>
-    <button><a href="/posts/edit/<%= post._id %>">Edit</a></button>
+    <div class ="artPage">
+    <h1 class="mondoArtHead">Mondo Art</h1>
+    <div class="artTitle"><%= post.title %></div>
+    <img src="<%= post.image %>" class="artImage">
+    <div class="artBoxPostShow">
+    <div id= "artDescription"><%= post.description %></div>
+    <div id= "artDateMade"><%= post.dateMade %></div>
+    <button id="editButton"><a href="/posts/edit/<%= post._id %>">Edit</a></button>
     <form action='/posts/<%= post._id %>?_method=DELETE' method='POST'>
-        <button>Delete</button>
+        <button id="deleteButton">Delete</button>
     </form>
+    </div>
+</div>
 </body>
 </html>

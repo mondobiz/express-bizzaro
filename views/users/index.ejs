@@ -8,17 +8,31 @@
 </head>
 <body>
   <div class='homeContainerToo'>
-  <h1 class='mondoHomeHeader'>MONDO BIZZARO</h1>
-  <img src="https://i.imgur.com/LmUaEh3.jpg" class="skullBear">
-  <form action='/posts' method='POST' class='loginFlex'>
-    <label for='userName'>Enter Username</label>
-    <input name='userName' type='text' /><br />
-
-    <label for='password'>Enter Password</label>
-    <input name='password' type='text' /><br />
+    <!-- TODO: Use for Navigation Bar -->
     
-    <input type='submit' />
-</form>
-</div>
-</body>
-</html>
+    <img src="https://i.imgur.com/LmUaEh3l.jpg" class="skullBear">
+    <div class="loginContainer">
+    <ul>
+      <li class="homeNav"><img src="https://i.imgur.com/rCt6lfKs.jpg?2"></a>HOME</li>
+      <li class="artNav"><img src="https://i.imgur.com/oafDe5us.jpg?2"></a>ART</li>
+      <li class="profileNav"><img src="https://i.imgur.com/jEFwm0as.jpg?2"></a>PROFILE</li>
+    </ul>
+    <h1 class='mondoHomeHeader'>MONDO BIZZARO</h1>
+      
+      <form action='/posts' method='POST' class="gridLogin">
+        <div class="loginInfo">
+          <label for='userName'>Username:</label>
+          <input name='userName' type='text' />
+          
+          <label for='password'>Password:</label>
+          <input name='password' type='text' />
+          
+        </div>
+        
+        <input type='submit' class="ETMB" value="Enter The Mondo Bizzaro!" />
+        <input type='submit' class="mondoMember" value="Become A Mondo Member!" />
+        
+      </form>
+    </div>
+  </body>
+  </html>

@@ -7,16 +7,23 @@
   <title>Mondo Home</title>
 </head>
 <body>
+  <div class="mondoArtPage">
+  <header class="mondoArtTitle">
   <h1>Mondo Art</h1>
+</header>
+  <div class="mondoArt">
   <ul>
     <% for(let i = 0; i < posts.length; i++){ %>
       <li>
-        <a href="/posts/<%= posts[i]._id %>">
+        <a href="/posts/<%= posts[i]._id %>" class="mondoArtContent">
+          <%= posts[i].image %>
           <%= posts[i].title %>
         </a>
       </li>
     <% } %>
   </ul>
   <a href='/posts/new'>Create some new art!</a>
+</div>
+</div>
 </body>
 </html>

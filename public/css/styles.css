@@ -1,45 +1,152 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
 :root {
     --primary-brand-color: orange;
     --secondary-brand-color: purple;
+    --third-color: greenyellow;
+    --fourth-color: rgb(0, 234, 255);
     --logo-font: 'Press Start 2P', Cursive, Helvetica;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
-body { 
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: var(--logo-font);
     background-image: url(https://i.imgur.com/5tTumRC.jpg);
     text-align: center;
+    height: 100%;
+}
+h1 {
+    margin: 10px 5px 10px 5px;
 }
 
-
 .homeContainerToo {
-    border: 10px solid black;
-    background-color: var(--primary-brand-color);
-    min-width: 500px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+    
+    border: 5px solid black;
+    background-image: url(https://i.imgur.com/P8l7E1p.jpg);
+    
 }
 
 .mondoHomeHeader {
     min-width: 500px;
 }
-
-.loginFlex {
-    min-width: 500px;
+.loginContainer {
+    margin-bottom: 20px;
+    min-width: 450px;
+    border: 10px solid black;
+    
+    background-image: url('https://i.imgur.com/ShUp4Lu.jpg'); 
+}
+.gridLogin {
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
-img {
-    border: 10px solid black;
-    max-width: 500px;
+
+.loginInfo {
+    display: grid;
+    grid-template-rows: 30px 1fr 30px 1fr;
+    justify-items: stretch;
+    
+    margin: 0px;
+}
+img.skullBear {
+    max-width: 530px;
     max-height: 600px;
+    
+    border: 0px;
+}
+
+.ETMB {
+    
+    background-color: greenyellow;
+    
+    margin: 0px;
+    font-family: var(--logo-font);
+    color: red;
+    height: 100px;
+}
+.mondoMember {
+    
+    background-color: red;
+    
+    margin: 0px;
+    font-family: var(--logo-font);
+    color: var(--third-color);
+    height: 100px;
+}
+
+
+#editButton {
+    background-color: var(--third-color);
+    font-family: var(--logo-font);
+}
+#deleteButton {
+    background-color: red;
+    font-family: var(--logo-font);
+}
+
+label {
+    height: 10px;
+    margin-top: 10px;
+               
+}
+form {
+    margin: 0px;
+    border: 0px;
+   
+}
+input {
+    background-color: red;
+    height: 50px;
+    font-size: 15px;
+    border: 0px;
+    margin: 0; 
 }
 
 ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: stretch;
+    align-items: center;
+    margin-top: 10px;
+    border: 0px;
     list-style-type: none;
+}
+
+.homeNav {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+}
+
+.artNav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-brand-color);
+}
+
+.profileNav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fourth-color);
 }
