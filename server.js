@@ -26,7 +26,8 @@ app.use(express.static(__dirname + '/public'));
 
 // routes ===============
 app.get('/', (req, res) => {
-  res.send('hello world');
+  // res.send('hello world');
+  res.redirect('/users')
 })
 
 // controllers ===============
