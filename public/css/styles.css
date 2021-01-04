@@ -150,3 +150,8 @@ ul {
     flex-direction: column;
     background-color: var(--fourth-color);
 }
+
+.art-index-image {
+    max-height: 400px;
+    max-width: 200px;
+}

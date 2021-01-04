@@ -36,7 +36,7 @@ https://trello.com/b/NYdlcdNW
 <br>
 
 Link to App
-http://localhost:3000/users
+https://express-bizzaro.herokuapp.com/users
 <br>
 
 ERD

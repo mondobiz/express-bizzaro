@@ -16,7 +16,7 @@
     <% for(let i = 0; i < posts.length; i++){ %>
       <li>
         <a href="/posts/<%= posts[i]._id %>" class="mondoArtContent">
-          <%= posts[i].image %>
+          <img class="art-index-image" src="<%= posts[i].image %>" alt="<%= posts[i].title %>"/>
           <%= posts[i].title %>
         </a>
       </li>
