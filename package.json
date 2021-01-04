@@ -1,6 +1,9 @@
 {
   "name": "express-bizzaro",
   "version": "1.0.0",
+  "engines": {
+    "node": "^15.2.1"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
